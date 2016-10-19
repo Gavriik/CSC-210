@@ -1,1 +1,1 @@
-# CSC-210
+# Assignments from my CSC-210 class
