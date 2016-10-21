@@ -7,26 +7,26 @@ public class SentenceCap {
 	public static String line; // line of text entered by the user
 
     public static void main(String[] args) {
-       Scanner input = new Scanner(System.in);
+    	Scanner input = new Scanner(System.in);
        
-       System.out.println("Enter a line of text.");
-       line = input.nextLine();
-       System.out.println();
-       System.out.println("Capitalized version:");
-       System.out.println(capitalizeFirstLetterOfEachSentence(line));
-       input.close();
-    }  // end main()
+    	System.out.println("Enter a line of text.");
+    	line = input.nextLine();
+    	System.out.println();
+    	System.out.println("Capitalized version:");
+    	System.out.println(capitalizeFirstLetterOfEachSentence(line));
+    	input.close();
+    }
 
 
 
-public static String capitalizeFirstLetterOfEachSentence(String str){
-    char[] arr = line.toCharArray();
+    public static String capitalizeFirstLetterOfEachSentence(String str) {
+	char[] arr = line.toCharArray();
 
-    // Start off by indicating to capitalize the first letter.
-    boolean cap = true;
-    boolean space_found = true;
+	// Start off by indicating to capitalize the first letter.
+	boolean cap = true;
+	boolean space_found = true;
 
-    for (int i = 0; i<arr.length; i++){
+    for (int i = 0; i<arr.length; i++) {
         if (cap) {
             // white space includes \n, space
             if (Character.isWhitespace(arr[i])) 
@@ -45,5 +45,6 @@ public static String capitalizeFirstLetterOfEachSentence(String str){
         }
     }
     return new String(arr);
-}
+    }
+
 }

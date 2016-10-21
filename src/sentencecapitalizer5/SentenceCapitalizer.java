@@ -18,26 +18,31 @@ Demonstrate the method in a program that asks the user to input a string and the
 
 //capitalizes first letter of every sentence.
 public class SentenceCapitalizer {
+	
 	public static String sentence; // line of text entered by the user
 
-    public static void main(String[] args) {
-       Scanner inputSentc = new Scanner(System.in);
-       
-       System.out.println("Enter a line of text.");
-       sentence = inputSentc.nextLine();
-       System.out.println();
-       System.out.println("Capitalized version:");
-       printCapitalized( sentence );
-       inputSentc.close();
-    }  // end main()
+	public static void main(String[] args) {
+		
+		Scanner inputSentc = new Scanner(System.in);
+		System.out.println("Enter a line of text.");
+		sentence = inputSentc.nextLine();
+		System.out.println();
+		System.out.println("Capitalized version:");
+		printCapitalized( sentence );
+		inputSentc.close();
+	}
     
-    static void printCapitalized( String str ) {
-	// using StringBuilder
+	static void printCapitalized( String str ) {
+		
+		// using StringBuilder
 		int position = 0;
 		boolean capitalize = true;
+		
 		// sb (stringbuilder) is an instance of StringBuilder. 
 		StringBuilder sb = new StringBuilder(sentence);
+		
 		while (position < sb.length()) {
+			
 		    if (sb.charAt(position) == '.' || sb.charAt(position) ==  '?' || sb.charAt(position) ==  '!') {
 		        capitalize = true;
 		    }
@@ -49,5 +54,6 @@ public class SentenceCapitalizer {
 		    position++;
 		}
 		System.out.println(sb.toString());
-    }
+	}
+    
 }

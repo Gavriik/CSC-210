@@ -24,6 +24,7 @@ public class WordCapitalizer {
 		char prevCh; // The character that comes before ch in the string.
 		int i; // A position in str, from 0 to str.length()-1.
 		prevCh = '.'; // Prime the loop with any non-letter character.
+		
 		for (i = 0; i < str.length(); i++) {
 			ch = str.charAt(i);
 			if (Character.isLetter(ch) && !Character.isLetter(prevCh))
@@ -34,4 +35,5 @@ public class WordCapitalizer {
 		}
 		System.out.println();
 	}
+	
 }

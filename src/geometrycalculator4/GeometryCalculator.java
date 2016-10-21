@@ -11,7 +11,6 @@ public class GeometryCalculator {
 		int choiceNumbers;
 
 		// do while loop
-
 		do {
 			System.out.println("\nGeometry Calculator\n" + "\n1. Calculate the Area of a Circle"
 					+ "\n2. Calculate the Area of a Rectangle" + "\n3. Calculate the Area of a Triangle" + "\n4. Quit"
