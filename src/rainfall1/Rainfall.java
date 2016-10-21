@@ -1,6 +1,7 @@
 package rainfall1;
 
 public class Rainfall {
+
 	public static String[] monthName = { "January", "February", "March", "April", "May", "June", "July", "August",
 			"September", "October", "November", "December" };
 	public static double[] rainFall;
@@ -54,4 +55,5 @@ public class Rainfall {
 			System.out.println(monthName[i] + "\t\t" + rainFall[i]);
 		}
 	}
+	
 }
