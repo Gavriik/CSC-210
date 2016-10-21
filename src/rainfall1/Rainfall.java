@@ -1,5 +1,5 @@
 package rainfall1;
-//testt
+
 public class Rainfall {
 
 	public static String[] monthName = { "January", "February", "March", "April", "May", "June", "July", "August",
