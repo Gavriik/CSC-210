@@ -5,26 +5,31 @@ public class Employee {
 	private String employeeNumber;
 	private String hireDate;
 
+	// constructor - creates employee object with parameters included to specify initial state 
 	public Employee(String n, String num, String date) {
 		name = n;
 		setEmployeeNumber(num);
 		hireDate = date;
 	}
 
+	// constructor -
 	public Employee() {
 		name = "";
 		employeeNumber = "";
 		hireDate = "";
 	}
 	
-    public void setHireDate(String date) {
-        hireDate = date;
+	// method - sets hire date for employee
+    public void setHireDate(String inputtedDate) {
+        hireDate = inputtedDate;
     }
 
-	public void setName(String n) {
-		name = n;
+    // method - sets name for employee
+	public void setName(String inputtedName) {
+		name = inputtedName;
 	}
 
+	// method - sets employee number
 	public void setEmployeeNumber(String e) {
 		if (isValidEmpNum(e))
 			employeeNumber = e;
@@ -32,6 +37,7 @@ public class Employee {
 			employeeNumber = "";
 	}
 
+	// method - gets hire date from 
 	public String getHireDate() {
 		return hireDate;
 	}
