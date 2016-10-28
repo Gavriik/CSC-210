@@ -1,15 +1,25 @@
 package employeeworker6;
 
+
+// This class will serve as a superclass for different types of employees.
+
 public class Employee {
 	private String name;
 	private String employeeNumber;
 	private String hireDate;
 
-	// constructor - creates employee object with parameters included to specify initial state 
-	public Employee(String n, String num, String date) {
-		name = n;
-		setEmployeeNumber(num);
-		hireDate = date;
+	// constructor - creates employee object with parameters included to specify initial state
+	  /**
+	   * Default constructor.
+	   * This constructor sets the name, number and hire date for an employee
+	   * @param name The employee's name
+	   * @param number The employee's number
+	   * @param hireDate The date the employee was hired
+	   */
+	public Employee(String inputName, String inputNumber, String inputDate) {
+		name = inputName;
+		setEmployeeNumber(inputNumber);
+		hireDate = inputDate;
 	}
 
 	// constructor -

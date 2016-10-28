@@ -4,14 +4,14 @@ public class ProductionWorkerDemo {
 	
 	public static void main(String[] args) {
 		
-		// here we are invoking the constructor to create an object or instance of "Employee"
-		ProductionWorker pw = new ProductionWorker("John Smith", "123-A", "11-15-2005", ProductionWorker.DAY_SHIFT, 16.50);
+		// invoking constructor to create an object or instance of "ProductionWorker"
+		ProductionWorker pw1 = new ProductionWorker("John Smith", "123-A", "11-15-2005", ProductionWorker.DAY_SHIFT, 16.50);
 		
-		// print first created employee
-		System.out.println("Here's the first production worker. ");
-		System.out.println(pw);
+		// print first employee
+		System.out.println("Production Worker #1 ");
+		System.out.println(pw1);
 		
-		// production worker set employee number
+		// invoking constructor to create an object or instance of "ProductionWorker"
 		ProductionWorker pw2 = new ProductionWorker();
 		// production worker set name
 		pw2.setName("Joan Jones");
@@ -25,7 +25,7 @@ public class ProductionWorkerDemo {
 		pw2.setPayRate(18.50);
 		
 		// print second employee
-		System.out.println("\nHere's the second production worker. ");
+		System.out.println("\nProduction Worker #2");
 		System.out.println(pw2);
 	}
 	
