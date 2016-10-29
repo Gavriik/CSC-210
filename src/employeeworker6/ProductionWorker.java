@@ -13,30 +13,17 @@ public class ProductionWorker extends Employee {
 	public static final int NIGHT_SHIFT = 2;
 	private int shift;
 	private double payRate;
-
-	// deconstructor - creates production worker1 object with parameters included to specify initial state
-	  /**
-	   * Default constructor.
-	   * This constructor sets the name, number and hire date for an Employee.
-	   * Then it sets up the specific fields for a ProductionWorker.
-	   * @param name The employee's name
-	   * @param number The employee's number
-	   * @param hireDate The date the employee was hired
-	   * @param shift The shift the employee works
-	   * @param payRate How much the employee is paid per hour
-	   */
+	
+	// Default constructor - creates production worker1 object with parameters included to specify initial state
+	// This constructor sets the name, number and hire date for an Employee.
+	// Then it sets up the specific fields (shift and pay rate) for a ProductionWorker.
 	public ProductionWorker(String inputName, String inputNumber, String inputDate, int inputShift, double inputRate) {
 		super(inputName, inputNumber, inputDate); // invoking superclass (employee) constructor 
 		shift = inputShift;
 		payRate = inputRate;
 	}
 
-	// constructor - creates production worker2 object with parameters included to specify initial state
-	  /**
-	   * Copy constructor.
-	   * This constructor will create a new ProductionWorker by copying another.
-	   * @param pw An existing ProductionWorker object
-	   */
+	// Copy constructor creates a new ProductionWorker by copying an existing ProductionWorker object (pw1)
 	public ProductionWorker() {
 		super(); // invoking superclass (employee) constructor 
 		shift = DAY_SHIFT;
@@ -58,11 +45,11 @@ public class ProductionWorker extends Employee {
 		return payRate;
 	}
 
-	// mutator (setter) - set production worker pay rate
+	// mutator method (setter) - set production worker pay rate
 	public void setPayRate(double inputtedPayRate) {
 		payRate = inputtedPayRate;
 	}
-	
+	// To String Method- prints a nicely formatted string representation of the class' fields
 	public String toString() {
 		DecimalFormat dollar = new DecimalFormat("###0.00");
 		String str = super.toString();

@@ -8,48 +8,43 @@ public class Employee {
 	private String employeeNumber;
 	private String hireDate;
 
-	// constructor - creates employee object with parameters included to specify initial state
-	  /**
-	   * Default constructor.
-	   * This constructor sets the name, number and hire date for an employee
-	   * @param name The employee's name
-	   * @param number The employee's number
-	   * @param hireDate The date the employee was hired
-	   */
+	
+	// Default constructor - creates employee object with parameters included to specify initial state
+	// This constructor sets the name, number and hire date for an employee
 	public Employee(String inputName, String inputNumber, String inputDate) {
 		name = inputName;
 		setEmployeeNumber(inputNumber);
 		hireDate = inputDate;
 	}
 
-	// constructor -
+	// copy constructor????
 	public Employee() {
 		name = "";
 		employeeNumber = "";
 		hireDate = "";
 	}
 	
-	// method - sets hire date for employee
+	// accessor method (getter) - gets hire date from 
+	public String getHireDate() {
+		return hireDate;
+	}
+	
+	// mutator method (setter) - sets hire date for employee
     public void setHireDate(String inputtedDate) {
         hireDate = inputtedDate;
     }
 
-    // method - sets name for employee
+    // mutator method (setter)- sets name for employee
 	public void setName(String inputtedName) {
 		name = inputtedName;
 	}
 
-	// method - sets employee number
+	// mutator method (setter) - sets employee number
 	public void setEmployeeNumber(String e) {
 		if (isValidEmpNum(e))
 			employeeNumber = e;
 		else
 			employeeNumber = "";
-	}
-
-	// method - gets hire date from 
-	public String getHireDate() {
-		return hireDate;
 	}
 
 	private boolean isValidEmpNum(String e) {
@@ -64,7 +59,8 @@ public class Employee {
 		}
 		return status;
 	}
-
+	
+	// To String Method - prints a nicely formatted string representation of the class' fields
 	public String toString() {
 		String str = "Name: " + name + "\nEmployee Number: ";
 		if (employeeNumber == "")
