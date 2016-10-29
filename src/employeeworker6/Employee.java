@@ -47,6 +47,7 @@ public class Employee {
 			employeeNumber = "";
 	}
 
+	// employee number input validation - letter should be within the range of A-M
 	private boolean isValidEmpNum(String e) {
 		boolean status = true;
 		if (e.length() != 5)

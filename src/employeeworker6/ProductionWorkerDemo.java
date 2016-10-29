@@ -1,5 +1,7 @@
 package employeeworker6;
 
+import java.util.Scanner;
+
 public class ProductionWorkerDemo {
 	
 	public static void main(String[] args) {
@@ -11,22 +13,34 @@ public class ProductionWorkerDemo {
 		System.out.println("Production Worker #1 ");
 		System.out.println(pw1);
 		
+		// scanner - gets user input
+		Scanner userInput = new Scanner(System.in);
+		
 		// invoking constructor to create an object or instance of "ProductionWorker"
 		ProductionWorker pw2 = new ProductionWorker();
+		
 		// production worker set name
-		pw2.setName("Joan Jones");
+		System.out.println("\nEnter your name: \n(Format: FirstName LastName)");
+		pw2.setName(userInput.nextLine());
 		// production worker set employee number
-		pw2.setEmployeeNumber("222-L");
-		// production worker set hire date
-		pw2.setHireDate("12-12-2005");
-		// production worker set shift
-		pw2.setShift(ProductionWorker.NIGHT_SHIFT);
-		// production worker set pay rate
-		pw2.setPayRate(18.50);
+        System.out.println("Enter your employee number: \n(Format: 789-L)");
+        pw2.setEmployeeNumber(userInput.nextLine());
+        // production worker set hire date
+        System.out.println("Enter your hire date: \n(Format: xx-xx-xxxx)");
+        pw2.setHireDate(userInput.nextLine());
+        // production worker set pay rate
+        System.out.println("Enter your payrate: \n(Format: 10.50)");
+        pw2.setPayRate(userInput.nextDouble());
+        // production worker set shift
+        System.out.println("Enter your shift (day=1, night=2): ");
+        pw2.setShift(userInput.nextInt());
 		
 		// print second employee
 		System.out.println("\nProduction Worker #2");
 		System.out.println(pw2);
+		
+		// close scanner
+		userInput.close();
 	}
 	
 }
